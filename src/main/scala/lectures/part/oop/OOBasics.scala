@@ -25,7 +25,7 @@ class Novel(name: String, releaseYear: Int, author: Writer) {
 
   def isWrittenBy(author: Writer) = author == this.author
 
-  def copy(newReleaseYear: Int) = this(name, newReleaseYear, author)
+  def copy(newReleaseYear: Int): Novel = new Novel(name, newReleaseYear, author)
 }
 
 object OOBasics extends App {
