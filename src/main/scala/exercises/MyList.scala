@@ -6,7 +6,6 @@ abstract class MyList {
   def tail: MyList
   def isEmpty: Boolean
   def add(elem: Int): MyList
-  def toString(): String
 }
 
 object Empty extends MyList {
