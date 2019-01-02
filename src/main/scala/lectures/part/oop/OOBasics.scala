@@ -14,6 +14,20 @@ class Person(name: String, val age: Int) {
 
 }
 
+class Writer(name: String, surname: String, val age: Int) {
+
+  def fullName = s"$name $surname"
+}
+
+class Novel(name: String, releaseYear: Int, author: Writer) {
+
+  def authorAge = author.age
+
+  def isWrittenBy(author: Writer) = author == this.author
+
+  def copy(newReleaseYear: Int) = this(name, newReleaseYear, author)
+}
+
 object OOBasics extends App {
 
   val person = new Person("John", 23)
